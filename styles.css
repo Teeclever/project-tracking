@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.container {
+   position: fixed;
+   z-index: -1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.cotainer1 {
+width: 50%;
+height: 60%;
+background-color: white;
+}
+.container2 {
+width: 50%;
+height: 50%;
+background-color: hsl(207, 33%, 95%);
+border-bottom-left-radius: 100px;
+}
+
+
+body {
+    font-size: 16px;
+}
+header {
+
+    height: 78px;
+    
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw;
+    align-items: flex-end;
+    height: 100%;
+}
+.navmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 55%;
+    gap: 3vw;
+   
+}
+.navmenu li {
+    list-style: none;
+    position: relative;
+
+}
+.navmenu li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -7px;
+    border-radius: 5px;
+    transition: 0.8s;
+}
+.navmenu li:hover::after {
+    width: 100%;
+}
+.navmenu .btn {
+    list-style: circle;
+}
+.navmenu li a {
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 550;
+}
+.hambugger {
+    width: 26px;
+    height: 20px;
+    right: 2rem;
+    top: 24px;
+    
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+}
+.hambugger .bar {
+    width: 100%;
+    left: -100%;
+    height: 3px;
+    border-radius: 30px;
+    background-color: black;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* body part */
+.general {
+width: 100%;
+height: 70vh;
+
+position: absolute;
+margin-top: 10vw;
+display: flex;
+justify-content: center;
+
+
+}
+.general .part1 {
+width: 40%;
+height: 80%;
+margin-left: 9vw;
+}
+
+.part1 .span1 {
+ 
+    padding:3px;
+    border-radius: 20px; 
+    margin-right: 12px;
+    background-color: hsl(230, 29%, 20%);
+    text-transform: uppercase;
+    color: white;
+}
+.part1 .span2 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+.part1 h1 {
+    font-size: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: -2px;
+   
+    color: hsl(230, 29%, 20%);
+}
+.part1 .span3 {
+font-size: 18px;
+opacity: 50%;
+margin-top: 10px;
+line-height: 25px;
+}
+
+.part1 button {
+    margin-top: 40px;
+    width: 200px;
+    height: 45px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color:hsl(0, 100%, 68%);
+ opacity: 80%;
+}
+.part1 .span5 {
+    text-transform: uppercase;
+    margin-left: 10px;
+    letter-spacing: 5px;
+ 
+    font-size: 13px;
+}
+
+
+
+
+.general .part2 {
+    width:49%;
+    height: 85%;
+  
+    margin-top: -4vw;
+    background-image: url(./images/illustration-devices.svg);
+    background-size: cover;
+    margin-left: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:700px) {
+    .hambugger {
+        display: flex;
+    }
+    .hambugger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hambugger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hambugger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header .logo {
+        top: px;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        
+        justify-content: flex-start;
+        padding: 5vw 10vw;
+        align-items: flex-start;
+        height: 100%;
+   
+        z-index: 1;
+    }
+    .navmenu {
+    
+      
+        flex-direction: column;
+        gap: 3.5vw;
+        position: fixed;
+        left: 100%;
+        width: 80%;
+        margin-left: 11vw;
+        text-align: center;
+        background-color: white;
+        top: 75px;
+        height: fit-content;
+        box-shadow: 1px 1px 5px;
+        border-radius: 5px;
+        padding: 18px 15px;
+        transition: 0.7s ease;
+        z-index: 1;
+       
+    }
+    .navmenu li {
+        width: 100%;
+        
+     
+    }
+    .navmenu .btn {
+        list-style: none;
+       
+    }
+    .navmenu li:nth-child(5){
+        border-top: 1px dashed gray;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .navmenu.active {
+        left: 0;
+    }
+    
+.navmenu li:hover::after {
+    width: 0;
+}
+.navmenu li a {
+    transition: 0.9s ease-in-out;
+}
+
+.navmenu li a:hover {
+    color: blue;
+}
+
+
+
+
+
+
+/* body part */
+.general {
+    width: 100%;
+    height: 600px;
+    
+    position: absolute;
+    margin-top: 15vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 10;
+
+    
+    
+    }
+    .general .part1 {
+    width: 100%;
+    height: 40%;
+
+    margin-top: 90px;
+    margin-left: 0vw;
+    padding-left: 8vw;
+  
+    }
+
+    
+.part1 .span1 {
+ 
+    padding:3px;
+    border-radius: 20px; 
+    margin-right: 12px;
+    background-color: hsl(230, 29%, 20%);
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+.part1 .span2 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+.part1 h1 {
+    font-size: 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: -2px;
+   
+    color: hsl(230, 29%, 20%);
+}
+.part1 .span3 {
+font-size: 17px;
+opacity: 50%;
+margin-top: -10px;
+line-height: 25px;
+}
+
+.part1 button {
+    margin-top: 30px;
+    width: 150px;
+    font-size: 12px;
+    height: 35px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color:hsl(0, 100%, 68%);
+ opacity: 80%;
+}
+.part1 .span5 {
+    text-transform: uppercase;
+    margin-left: 10px;
+    letter-spacing: 1px;
+ opacity: 50%;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+.general .part2 {
+    width:95%;
+    height: 250px;
+  
+    margin-top: -29vw;
+    background-image: url(./images/illustration-devices.svg);
+    background-size: cover;
+    margin-left: 5vw;
+}
+
+.container {
+    position: fixed;
+    z-index: -1;
+     height: 90vh;
+     width: 100%;
+     display: flex;
+ }
+
+}
